@@ -1,0 +1,77 @@
+body {
+    background: skyblue;
+    animation-name: background;
+    animation-duration: 6s;
+    animation-delay: 0.3s;
+    animation-iteration-count: infinite;
+  }
+  .sun {
+    height: 150px;
+    width: 150px;
+    border-radius: 100px;
+    background: orange;
+    box-shadow: 2px 2px 50px 10px orange;
+    border: 1px solid orange;
+    position: absolute;
+    right: 400px;
+    top: -150px;
+    animation-name: sunset;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+  }
+  .moon {
+    height: 150px;
+    width: 150px;
+    border-radius: 100px;
+    background: white;
+    box-shadow: 2px 2px 50px 10px white;
+    border: 1px solid white;
+    position: absolute;
+    bottom: 20px;
+    left: 200px;
+    animation-name: moon;
+    animation-duration: 6s;
+    animation-delay: 0.2s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes background {
+    0% {
+      background: rgba(49, 141, 199, 0.8);
+    }
+    70% {
+      background: linear-gradient(
+        to top,
+        rgba(49, 141, 199, 0.8),
+        rgba(247, 167, 27, 0.5)
+      );
+    }
+    100% {
+      background: rgba(0, 0, 0, 0.9);
+    }
+  }
+  @keyframes sunset {
+    0% {
+      top: -150px;
+      background: linear-gradient(90deg, orange, gold);
+    }
+    100% {
+      top: 570px;
+      background: linear-gradient(45deg, orange, gold);
+      opacity: 0.2;
+    }
+  }
+  @keyframes moon {
+    0% {
+      bottom: 0px;
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.2;
+      bottom: 590px;
+      background: linear-gradient(rgba(0, 0, 0, 0.3), white);
+    }
+    100% {
+      top: 10px;
+      opacity: 1;
+    }
+  }
